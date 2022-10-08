@@ -72,7 +72,7 @@ export function getKindConfig(): KindConfig {
 
 // this action should always be run from a Linux worker
 export async function downloadKind(version: string): Promise<string> {
-    let url: string = `https://github.com/kubernetes-sigs/kind/releases/download/${version}/kind-linux-amd64`;
+    let url: string = `https://github.com/kubernetes-sigs/kind/releases/download/${version}/kind-linux-arm64`;
     console.log("downloading kind from " + url);
     let downloadPath: string | null = null;
     downloadPath = await tc.downloadTool(url);
